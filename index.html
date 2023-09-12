@@ -18,11 +18,12 @@
   <div class="main-container">
     <img src="./images/logo.svg" alt="" class="header-logo">
     
-    <div class="hero-container">
+    <div class="hero-container" style="order: 2">
       <img src="./images/hero-mobile.jpg" alt="" class="hero">
     </div>
 
-    <div class="sub-container">
+    <div class="sub-container" style="order: 1">
+      <img src="./images/logo.svg" alt="" class="hidden">
       <h1 class="pink-lettering"> We're</h1>
       <h1 class="black-lettering"> coming soon</h1>
       <p>
@@ -30,8 +31,9 @@
       </p>
   
       <div class="input-submit">
-        <input type="email" class="email"  size="30" placeholder="Email Address" required />
+        <input type="email" class="email"  size="30" placeholder="Email Address" oninput="reset()" required />
         <button type="submit" class="submit-btn" onclick="submit()"><img class="submit-img" src="./images/icon-arrow.svg" alt="Submit"></button>
+        <p class="invalid-email-text"></p>
       </div>
    
     </div>

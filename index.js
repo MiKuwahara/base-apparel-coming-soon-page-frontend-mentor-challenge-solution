@@ -5,8 +5,17 @@ function submit(email) {
 
     if(object.value.match(validRegex)){
         alert("Submitted!")
+        document.querySelector('.email').value = '';
     }else{
-        alert("Invalid email address!");
+        document.querySelector('.invalid-email-text').innerHTML = "Please provide a valid email";
+
+    }
+    
+}
+
+function reset(){
+    if(document.querySelector('.email').value === ''){
+        document.querySelector('.invalid-email-text').innerHTML = '';
     }
     
 }
